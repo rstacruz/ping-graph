@@ -2,7 +2,7 @@
   "name": "ping-graph",
   "description": "Graphs pings in the terminal",
   "keywords": [],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
   "bin": {
     "ping-graph": "bin/ping-graph"
