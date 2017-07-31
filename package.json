@@ -1,10 +1,7 @@
 {
   "name": "ping-graph",
   "description": "Graphs pings in the terminal",
-  "keywords": [
-    "ping",
-    "graph"
-  ],
+  "keywords": [],
   "version": "1.0.0",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)",
   "bin": {
@@ -22,6 +19,7 @@
     "ping": "0.2.2"
   },
   "devDependencies": {
+    "concat-stream": "1.6.0",
     "flow-bin": "0.51.1",
     "jest": "20.0.4",
     "standard": "10.0.2"
@@ -32,7 +30,6 @@
     "dist"
   ],
   "homepage": "https://github.com/rstacruz/ping-graph#readme",
-  "keywords": [],
   "license": "MIT",
   "main": "index.js",
   "repository": {

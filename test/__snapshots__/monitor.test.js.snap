@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Monitor works 1`] = `
+Array [
+  Object {
+    "state": Array [
+      80,
+    ],
+    "value": 80,
+  },
+  Object {
+    "state": Array [
+      90,
+      80,
+    ],
+    "value": 90,
+  },
+  Object {
+    "state": Array [
+      100,
+      90,
+      80,
+    ],
+    "value": 100,
+  },
+]
+`;
