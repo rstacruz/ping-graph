@@ -43,6 +43,13 @@ On a bad day, timeouts show up as red:
 
 ![](docs/screenshots/bad.png)
 
+## Prior art
+
+Also see:
+
+* [bricklen/graphping](https://github.com/bricklen/graphping)
+* [vivaldi-va/pinger](https://github.com/vivaldi-va/pinger)
+
 ## Thanks
 
 **ping-graph** © 2017, Rico Sta. Cruz. Released under the [MIT] License.<br>
