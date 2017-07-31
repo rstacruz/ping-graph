@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+const cli = require('meow')(`
+  Usage:
+    $ ping-graph [target]
+
+  Options:
+    -i, --interval <MS>  milliseconds interval
+    -l, --lines <N>      number of lines in the graph
+    -l, --lines auto     number of lines in the graph
+        --max-ping <MS>  max of the graph (scales if needed)
+        --min-ping <MS>  min of the graph (scales if needed)
+
+        --random         Random mode (for testing only)
+
+    -h, --help           show usage information
+    -v, --version        print version info and exit
+`, {
+  boolean: [
+    'help',
+    'version',
+    'random'
+  ],
+  string: [
+    'interval',
+    'max-ping',
+    'min-ping',
+    'lines'
+  ],
+  alias: {
+    h: 'help',
+    v: 'version',
+    l: 'lines',
+    i: 'interval'
+  }
+})
+
+const Ping = require('../index')
+
+let options = Object.assign({}, {
+  target: cli.input.join(' ')
+}, cli.flags)
+
+// Cast to int
+;['lines', 'maxPing', 'minPing', 'interval'].forEach((arg) => {
+  if (arg in options && options[arg].match(/^\d+$/)) {
+    options[arg] = +options[arg]
+  }
+})
+
+Ping.run(options)
